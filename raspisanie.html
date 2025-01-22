@@ -911,12 +911,13 @@
 										<h3>Четверг:</h3>
 										<li><span>17.15</span> – Правильная осанка. Дети 9-14 лет. (Даша, <span>60
 												мин</span>)</li>
-										<li><span>19.30</span> – Здоровые и красивые ноги. Авторский класс (Настя/Марина)</li>
+										<li><span>19.30</span> – Здоровые и красивые ноги. Авторский класс
+											(Настя/Марина)</li>
 									</div>
 									<div class="day">
 										<h3>Пятница:</h3>
 										<li><span>10.00</span> – Женская практика (Марина)</li>
-										
+
 										<li><span>19.00</span> – Здоровая спина (Настя)</li>
 									</div>
 									<div class="day">
@@ -935,7 +936,7 @@
 									<div class="day">
 										<h3>Понедельник:</h3>
 										<li><span>9.00</span> – Йога для начинающих (Катя)</li>
-										
+
 										<li><span>19.45</span> – Общеукрепляющаяя практика и суставная гимнастика </li>
 									</div>
 									<div class="day">
@@ -944,7 +945,7 @@
 									</div>
 									<div class="day">
 										<h3>Среда:</h3>
-										
+
 										<li><span>19.45</span> – Общеукрепляющая практика и суставная гимнастика
 										</li>
 									</div>
@@ -963,11 +964,11 @@
 										<li><span>11.00</span> – Йога для начинающих: здоровая спина и суставная
 											гимнастика (<span>1 час 25
 												мин</span>)</li>
-									<li><span>17.30</span> – Здоровые ноги: авторский класс (Настя)</li>
+										<li><span>17.30</span> – Здоровые ноги: авторский класс (Настя)</li>
 									</div>
 									<div class="day">
 										<h3>Воскресенье:</h3>
-										<li><span>По записи</span> – Индивидуальные занятия и массажи 
+										<li><span>По записи</span> – Индивидуальные занятия и массажи
 										</li>
 									</div>
 								</div>
@@ -1099,11 +1100,11 @@
 									const notification = document.getElementById("notification");
 									let selectedLink = '';
 									let selectedCourseType = '';
-								
+
 									// Define Telegram API URL
 									const telegramApiUrl = "https://api.telegram.org/bot8162513641:AAGbyFDIZ5dPSrRBtXXzusB_8k3M8cIgXvw/sendMessage";
 									const chatId = "-1002260812823"; // Replace with your chat ID
-								
+
 									// Function to send message to Telegram
 									function sendTelegramMessage(courseType, name, phone) {
 										const message = `Новая запись: ${courseType}\n----\nИмя: ${name}\nТелефон: ${phone}`;
@@ -1112,43 +1113,43 @@
 											.then(data => console.log('Message sent to Telegram:', data))
 											.catch(error => console.error('Error sending message to Telegram:', error));
 									}
-								
+
 									// Открытие модального окна
 									function openModal(link, courseType) {
 										selectedLink = link;
 										selectedCourseType = courseType; // Store course type
 										modal.style.display = 'flex';
 									}
-								
+
 									// Закрытие модального окна
 									closeModalButton.onclick = function () {
 										modal.style.display = 'none';
 									}
-								
+
 									// Закрытие при клике за пределами модального окна
 									modal.onclick = function (event) {
 										if (event.target === modal) {
 											modal.style.display = 'none';
 										}
 									}
-								
+
 									// Обработка отправки формы
 									paymentForm.onsubmit = function (event) {
 										event.preventDefault(); // Prevent default form submission
 										notification.style.display = 'block'; // Show redirect message
-								
+
 										// Extract name and phone from form fields
 										const name = document.getElementById("form-field-name").value;
 										const phone = document.getElementById("form-field-field_62b03d1").value;
-								
+
 										sendTelegramMessage(selectedCourseType, name, phone); // Send Telegram message with course type, name, and phone
-								
+
 										// Open payment link in a new tab directly after form submission
 										window.open(selectedLink, '_blank'); // Open payment link in new tab
 										modal.style.display = 'none'; // Close modal
 										notification.style.display = 'none'; // Hide message after redirect
 									}
-								
+
 									// Add event listener to buttons
 									document.querySelectorAll(".custom-btn").forEach(button => {
 										button.onclick = function () {
@@ -1156,17 +1157,17 @@
 											openModal(this.dataset.link, courseType);
 										};
 									});
-								
+
 									// Open modal with specific course type for each button
 									document.getElementById('new_buyNowButtonMassage1').addEventListener('click', function () {
 										openModal(this.dataset.link, 'Комбо');
 									});
-								
+
 									document.getElementById('new_buyNowButtonMassage2').addEventListener('click', function () {
 										openModal(this.dataset.link, 'Zoom');
 									});
 								</script>
-								
+
 
 								<style>
 									/* Стили для модального окна */
