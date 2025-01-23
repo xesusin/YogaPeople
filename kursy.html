@@ -1034,9 +1034,9 @@
                     <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
                         <h3 class="h3-title">Курс «Здоровая спина»</h3>
                         <h1>До начала:</h1>
-                        <div class="timer-wrapper"><span id="timer">Курс доступен</span></div>
+                        <div class="timer-wrapper"><span id="timer" style="border-color: red;">Курс завершён</span>
+                        </div>
                     </div>
-                    <script src="../js/timer.js"></script>
                     <div class="course-container" style="min-height: 450px">
                         <div class="course-info">
                             <h1 style="margin-bottom: 10px;">Йогатерапия при болях и скованности в спине.</h1>
@@ -1061,18 +1061,9 @@
                             <h2 style="margin-bottom: 0;">Записаться на курс</h2>
                             <div style="display: flex; gap: 15px; justify-content: center;">
                                 <div style="text-align: center;">
-                                    <button class="custom-btn" id="new_buyNowButtonMassage"
-                                        data-link="https://auth.robokassa.ru/merchant/Invoice/YkCSWCdk1Um8zXVEb7omqg">
-                                        С массажем
+                                    <button class="custom-btn">
+                                        Курс Завершён
                                     </button>
-                                    <div style="margin-top: 5px; font-size: 14px;">от 3938 ₽ / мес.</div>
-                                </div>
-                                <div style="text-align: center;">
-                                    <button class="custom-btn" id="new_buyNowButtonNoMassage"
-                                        data-link="https://auth.robokassa.ru/merchant/Invoice/hdB00YmzQUeXCUkfwNhhaw">
-                                        Без массажа
-                                    </button>
-                                    <div style="margin-top: 5px; font-size: 14px;">от 1813 ₽ / мес.</div>
                                 </div>
                             </div>
 
@@ -1080,20 +1071,23 @@
                                 .custom-btn {
                                     margin: 5px 0 0 0;
                                     padding: 12px 20px;
-                                    border: 2px solid #84BA0F;
+                                    border: 2px solid red;
                                     border-radius: 8px;
-                                    background-color: #84BA0F;
-                                    color: #84BA0F;
+                                    background-color: #ffffff;
+                                    color: #000000 !important;
                                     font-size: 16px;
                                     font-weight: bold;
                                     cursor: pointer;
                                     transition: all 0.3s ease;
                                 }
 
-                                .custom-btn:hover {
-                                    color: #5c0d0d !important;
-                                    background-color: #fff;
-                                    border-color: #5c0d0d !important;
+                                .custom-btn:hover,
+                                .custom-btn:focus,
+                                .custom-btn:active,
+                                .custom-btn:focus-visible {
+                                    color: black !important;
+                                    background-color: rgb(255, 255, 255);
+                                    border-color: red !important;
                                 }
                             </style>
 
@@ -1209,8 +1203,7 @@
                                 </div>
                                 <p>4 200₽ <span class="discount">5 600₽</span></p>
                                 <p>Скидка 25%</p>
-                                <script src="../js/timer.js?ver=2.1.0"></script>
-                                <button>Курс завершён</button>
+                                <button class="custom-btn">Курс завершён</button>
                             </div>
                         </div>
                         <div class="course-details">
@@ -1757,7 +1750,8 @@
                                         <figure class="elementor-image-box-img"><img decoding="async" width="300"
                                                 height="300" src="../wp-content/uploads/2023/12/5-1-300x300.png"
                                                 class="attachment-medium size-medium wp-image-654"
-                                                alt="🧘‍♂️ Сеть уютных студий йоги и массажа в Невском районе Санкт-Петербурга. Онлайн! Индивидуальные и групповые занятия." sizes="(max-width: 300px) 100vw, 300px" />
+                                                alt="🧘‍♂️ Сеть уютных студий йоги и массажа в Невском районе Санкт-Петербурга. Онлайн! Индивидуальные и групповые занятия."
+                                                sizes="(max-width: 300px) 100vw, 300px" />
                                         </figure>
                                         <div class="elementor-image-box-content"><span
                                                 class="elementor-image-box-title">YogaPeople</span>
@@ -1969,7 +1963,7 @@
                                         </span>
                                         <span class="elementor-grid-item">
                                             <a class="elementor-icon elementor-social-icon elementor-social-icon-whatsapp elementor-repeater-item-d765963"
-                                                href="https://wa.me/7-921-941-79-51" target="_blank">
+                                                href="https://wa.me/+79219417951" target="_blank">
                                                 <span class="elementor-screen-only">Whatsapp</span>
                                                 <svg class="e-font-icon-svg e-fab-whatsapp" viewBox="0 0 448 512"
                                                     xmlns="../../www.w3.org/2000/svg.html">
